@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 2020_05_28_034753) do
     t.string "name"
     t.text "summary"
     t.date "release_date"
-    t.integer "category"
     t.decimal "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "parent_id"
+    t.integer "category"
     t.index ["parent_id"], name: "index_games_on_parent_id"
   end
 
